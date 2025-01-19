@@ -1,4 +1,4 @@
-package com.example.demo.controlers;
+package com.example.demo.controllers;
 
 import com.example.demo.Services.implementation.ConferenceService;
 import com.example.demo.entites.Conference;
