@@ -1,15 +1,17 @@
 package com.example.demo.entites;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.*;
 
 
-@Getter
-@Setter
+@Data
 @Entity
+@NoArgsConstructor
 public class Auteur {  // Refers to 'Auteur'
 
     @Id
@@ -18,9 +20,6 @@ public class Auteur {  // Refers to 'Auteur'
 
     private String nom;
     private String prenom;
-
-
-    public Auteur() {}
 
     public Auteur(String nom, String prenom) {
         this.nom = nom;

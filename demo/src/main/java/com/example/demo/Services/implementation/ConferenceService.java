@@ -1,10 +1,12 @@
 package com.example.demo.Services.implementation;
 
 import com.example.demo.Services.interfaces.IConferenceService;
+import com.example.demo.entites.Auteur;
 import com.example.demo.entites.Conference;
 import com.example.demo.repositories.ConferenceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 import java.util.List;
 import java.util.Optional;
@@ -32,6 +34,7 @@ public class ConferenceService implements IConferenceService {
 
     @Override
     public Optional<Conference> updateConference(int id, Conference updatedConference) {
+
         return conferenceRepository.findById(id).map(existingConference -> {
             existingConference.setTitre(updatedConference.getTitre());
             existingConference.setDateDebut(updatedConference.getDateDebut());
